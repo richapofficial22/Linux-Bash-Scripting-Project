@@ -25,6 +25,18 @@ What it does?
    - <img width="1031" height="659" alt="Screenshot 2026-04-30 at 11 41 48 PM" src="https://github.com/user-attachments/assets/496a9566-4bb5-4681-b65a-efe83bd3bfe1" />
 
 
+## 
+# Script 3 : servicewatchdog.sh
+What it does?
+  - Check whether a named Linux service is running. If it is down restart it automatically and log the event with a timestamp. 
+  - <img width="893" height="522" alt="Screenshot 2026-05-01 at 12 18 29 AM" src="https://github.com/user-attachments/assets/dfc56923-6cf0-4c69-b139-1160f9703055" />
+is program ke pehle apt command run kiya , apt update and upgrade kiya, uske baad apt se cups install kiya. humara ubuntu user ka password set kiya . during the script the user is asked for password to run the script fully. iser enters password and script executes fully. 
+
+##
+ - <img width="557" height="243" alt="Screenshot 2026-05-01 at 1 26 53 AM" src="https://github.com/user-attachments/assets/be240666-7236-4a38-b551-6c5eefb60422" />
+ - <img width="472" height="106" alt="Screenshot 2026-05-01 at 1 28 27 AM" src="https://github.com/user-attachments/assets/bb8e56c0-fdd4-456e-8a72-f93a2685150e" />
+ - <img width="622" height="125" alt="Screenshot 2026-05-01 at 1 29 10 AM" src="https://github.com/user-attachments/assets/055b6e67-e55f-49cb-af0e-9623543f2b8a" />
+ - <img width="609" height="222" alt="Screenshot 2026-05-01 at 1 29 47 AM" src="https://github.com/user-attachments/assets/36846105-9975-4a4f-b8cb-f7d79e3d7a37" />
 
 
 
