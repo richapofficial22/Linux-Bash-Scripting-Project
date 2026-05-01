@@ -1,7 +1,6 @@
 # Bash-SysAdmin-Toolkit
 
-
-A collection of 5 production-style Bash scripts for Linux system administration where every script solves a real operational problem.
+A collection of 5 production-style Bash scripts for Linux system administration, built & tested on Ubuntu 22.04 via Amazon EC2. These scripts automate real operational tasks- disk monitoring, service health checks with auto-restart, log management & directory backups directly mirroring the day-to-day responsibilities of a Cloud Support/Cloud Engg.
 
 
 - Launched an EC2 instance (instanceproject2) with Ubuntu 
