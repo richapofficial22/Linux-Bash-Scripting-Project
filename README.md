@@ -1,5 +1,5 @@
 # Linux-Bash-Scripting-Project
-A collection of 4 production-style Bash scripts for Linux system administration where every script
+A collection of 5 production-style Bash scripts for Linux system administration where every script
 solves a real operational problem.
     - Launched an EC2 instance (instanceproject2) with Ubuntu 
       <img width="1160" height="237" alt="Screenshot 2026-04-30 at 10 50 54 PM" src="https://github.com/user-attachments/assets/5eedcebd-0f19-4d0b-bc7a-4329c1d128fd" />
@@ -10,11 +10,12 @@ solves a real operational problem.
 
 # Script 1 : diskmonitor.sh
 What it does?
-  - Check all mounted file syatems.
-  - If any partition exceeds 80% threshold then print an Alert msg
+📊 disk-monitor.sh
+Scans all mounted partitions and flags any above a configurable threshold (default 80%). 
 - <img width="755" height="300" alt="Screenshot 2026-04-30 at 10 59 07 PM" src="https://github.com/user-attachments/assets/7aa10875-67a3-4946-9666-047cfc61936f" />
 - <img width="722" height="258" alt="Screenshot 2026-04-30 at 11 28 24 PM" src="https://github.com/user-attachments/assets/6fd7c8a8-a93a-4f64-822f-26ecb48c55c0" />
 - <img width="743" height="581" alt="Screenshot 2026-04-30 at 11 30 38 PM" src="https://github.com/user-attachments/assets/846c6ca0-926e-4ac2-a7a7-ab4ffdffd449" />
+
 
 ##
 
