@@ -37,8 +37,20 @@ is program ke pehle apt command run kiya , apt update and upgrade kiya, uske baa
  - <img width="472" height="106" alt="Screenshot 2026-05-01 at 1 28 27 AM" src="https://github.com/user-attachments/assets/bb8e56c0-fdd4-456e-8a72-f93a2685150e" />
  - <img width="622" height="125" alt="Screenshot 2026-05-01 at 1 29 10 AM" src="https://github.com/user-attachments/assets/055b6e67-e55f-49cb-af0e-9623543f2b8a" />
  - <img width="609" height="222" alt="Screenshot 2026-05-01 at 1 29 47 AM" src="https://github.com/user-attachments/assets/36846105-9975-4a4f-b8cb-f7d79e3d7a37" />
- 
 
+ ##
+
+ # Script 4 : logcleaner.sh
+ What it does? 
+   - Find and delete log files in /var/log older than N days. where N is input from user.
+   - The /var/log is root owned. And to delete files in it user must be given permission to do changes in it which will be a bad practice as then multiple user can have the authority to have the same permissions and make changes in the directory where log files are stored. Hence running this particular script as a root user.
+   - <img width="484" height="222" alt="Screenshot 2026-05-01 at 2 06 58 PM" src="https://github.com/user-attachments/assets/ca1f21fb-4af0-40e6-b997-4014fcd0c5ea" />
+   - <img width="718" height="334" alt="Screenshot 2026-05-01 at 2 29 03 PM" src="https://github.com/user-attachments/assets/43a0e7e1-d2b5-4b35-b66d-e3a45b7ef890" />
+   - <img width="649" height="556" alt="Screenshot 2026-05-01 at 2 28 25 PM" src="https://github.com/user-attachments/assets/88691c1b-444e-4d46-8df1-ba86260ff33c" />
+   - <img width="583" height="398" alt="Screenshot 2026-05-01 at 2 31 20 PM" src="https://github.com/user-attachments/assets/e05c358d-dde1-4057-9467-a385e41e43ec" />
+
+   ##
+   
 
 
 
