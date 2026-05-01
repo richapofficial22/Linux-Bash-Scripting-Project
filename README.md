@@ -10,8 +10,11 @@ A collection of 5 production-style Bash scripts for Linux system administration 
 
 - Connected to ubuntu instance using internet
       <img width="710" height="657" alt="Screenshot 2026-04-30 at 10 51 49 PM" src="https://github.com/user-attachments/assets/d62f0e59-258d-473c-b5aa-d7b5ffca1f48" />
+
 ##
+
 # Script 1 : diskmonitor.sh
+
 ## **What it does?**
 
 📊 disk-monitor.sh
@@ -24,6 +27,7 @@ Scans all mounted partitions and alarms any above a configurable threshold (defa
    - Taking input directly to variales using read -r
    - Suffix removal
    - Also learnt about awk command and wrote an alternate script below. 
+
 ```
 THRESHOLD=${1:-80}
 df -h | awk -v thresh="$THRESHOLD"  ' 
@@ -50,6 +54,7 @@ NR>1
 ##
 
 # Script 2 : systemhealth.sh
+
 ## **What it does?**
 
 🖥️ systemhealth.sh 
@@ -69,6 +74,7 @@ Prints a one-page system report: hostname, uptime,RAM used/total, disk usage per
 
 ## 
 # Script 3 : servicewatchdog.sh
+
 ## **What it does?**
 
 🔁 servicewatchdog.sh
@@ -142,6 +148,7 @@ fi
 ## **What it does?**
 
 💾 backup.sh
+
 Creates a timestamped compressed archive (.tar.gz) of any specified directory. Confirms the output file size on completion.
 
  **What I learnt?**
@@ -159,7 +166,9 @@ Creates a timestamped compressed archive (.tar.gz) of any specified directory. C
   
   - backup.sh
     <img width="545" height="122" alt="Screenshot 2026-05-01 at 5 11 13 PM" src="https://github.com/user-attachments/assets/1dae17b9-3120-467d-b5ae-57fea367aeee" />
+  
   - logcleaner.sh could not run as it was owned by root user <img width="739" height="276" alt="Screenshot 2026-05-01 at 5 15 57 PM" src="https://github.com/user-attachments/assets/c2d6556d-ff55-43b4-9fa5-beabfc4be507" />
+  
   - Successfully executing script with sudo.
     <img width="741" height="431" alt="Screenshot 2026-05-01 at 5 31 40 PM" src="https://github.com/user-attachments/assets/d82ebcf8-a27f-481e-8353-0831d0a16cac" />
 
