@@ -51,9 +51,16 @@ is program ke pehle apt command run kiya , apt update and upgrade kiya, uske baa
 
    ##
    
+# Script 5 : backup.sh
+What it does?
+  - Create a compressed archive of a specified directory with a timestamp in the filename
+  - <img width="552" height="261" alt="Screenshot 2026-05-01 at 5 08 52 PM" src="https://github.com/user-attachments/assets/7cb7aa44-c688-453e-8115-b88196c373f5" />
+  - <img width="545" height="122" alt="Screenshot 2026-05-01 at 5 11 13 PM" src="https://github.com/user-attachments/assets/1dae17b9-3120-467d-b5ae-57fea367aeee" />
+  - Logcleaner.sh could not run as it was owned by root user <img width="739" height="276" alt="Screenshot 2026-05-01 at 5 15 57 PM" src="https://github.com/user-attachments/assets/c2d6556d-ff55-43b4-9fa5-beabfc4be507" />
+  - New script :
+    <img width="741" height="431" alt="Screenshot 2026-05-01 at 5 31 40 PM" src="https://github.com/user-attachments/assets/d82ebcf8-a27f-481e-8353-0831d0a16cac" />
 
-
-
+##
 
 
 
