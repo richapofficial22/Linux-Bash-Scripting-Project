@@ -1,4 +1,4 @@
-# Linux-Bash-Scripting-Project
+# Bash-SysAdmin-Toolkit
 
 
 A collection of 5 production-style Bash scripts for Linux system administration where every script solves a real operational problem.
