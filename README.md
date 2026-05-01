@@ -71,7 +71,7 @@ Prints a one-page system report: hostname, uptime,RAM used/total, disk usage per
 # Script 3 : servicewatchdog.sh
 ## **What it does?**
 
-🔁 service-watchdog.sh
+🔁 servicewatchdog.sh
 
 Checks if a named Linux service is active. If not, it attempts an automatically restart it and logs the result with a timestamp to /var/log/watchdog.log. 
 
@@ -84,12 +84,31 @@ Checks if a named Linux service is active. If not, it attempts an automatically 
  ## **Execution** 
  
  - Created directory script3 then wrote the servicewatchdog.sh script and previewed it after changing its permissions.
-<img width="893" height="522" alt="Screenshot 2026-05-01 at 12 18 29 AM" src="https://github.com/user-attachments/assets/dfc56923-6cf0-4c69-b139-1160f9703055" />
-##
- - <img width="557" height="243" alt="Screenshot 2026-05-01 at 1 26 53 AM" src="https://github.com/user-attachments/assets/be240666-7236-4a38-b551-6c5eefb60422" />
- - <img width="472" height="106" alt="Screenshot 2026-05-01 at 1 28 27 AM" src="https://github.com/user-attachments/assets/bb8e56c0-fdd4-456e-8a72-f93a2685150e" />
- - <img width="622" height="125" alt="Screenshot 2026-05-01 at 1 29 10 AM" src="https://github.com/user-attachments/assets/055b6e67-e55f-49cb-af0e-9623543f2b8a" />
- - <img width="609" height="222" alt="Screenshot 2026-05-01 at 1 29 47 AM" src="https://github.com/user-attachments/assets/36846105-9975-4a4f-b8cb-f7d79e3d7a37" />
+  <img width="557" height="243" alt="Screenshot 2026-05-01 at 1 26 53 AM" src="https://github.com/user-attachments/assets/be240666-7236-4a38-b551-6c5eefb60422" />
+  
+  ```
+#!/bin/bash
+LOGFILE="/home/ubuntu/watchdog.log"
+SERVICE="cups.service"
+STATUS=$(systemctl is-active "$SERVICE")
+echo "Service: $SERVICE"
+echo "$(date '+%Y-%m-%d %H:%M:%S') - cups status : $STATUS" | tee -a "$LOGFILE"
+if [ "$STATUS" = "active" ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Service is running!" | tee -a "$LOGFILE"
+else
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Service is stopped. Starting now..." | tee -a "$LOGFILE"
+    sudo systemctl start "$SERVICE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Service has now started" | tee -a "$LOGFILE"
+fi
+```
+
+ - Successfully checked that service is active <img width="472" height="106" alt="Screenshot 2026-05-01 at 1 28 27 AM" src="https://github.com/user-attachments/assets/bb8e56c0-fdd4-456e-8a72-f93a2685150e" />
+ 
+ - Stopping service as user to run script when service is inactive
+   <img width="622" height="125" alt="Screenshot 2026-05-01 at 1 29 10 AM" src="https://github.com/user-attachments/assets/055b6e67-e55f-49cb-af0e-9623543f2b8a" />
+ 
+ - Successfull execution of script when script is inactive
+   <img width="609" height="222" alt="Screenshot 2026-05-01 at 1 29 47 AM" src="https://github.com/user-attachments/assets/36846105-9975-4a4f-b8cb-f7d79e3d7a37" />
 
  ##
 
