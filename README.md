@@ -43,7 +43,7 @@ NR>1
 
 ## **Execution**
 
-- Created seperate directory script1, created script and previewed it
+- Created separate directory script1, created script and previewed it
 <img width="755" height="300" alt="Screenshot 2026-04-30 at 10 59 07 PM" src="https://github.com/user-attachments/assets/7aa10875-67a3-4946-9666-047cfc61936f" />
 
 - diskmonitor.sh <img width="722" height="258" alt="Screenshot 2026-04-30 at 11 28 24 PM" src="https://github.com/user-attachments/assets/6fd7c8a8-a93a-4f64-822f-26ecb48c55c0" />
