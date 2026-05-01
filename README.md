@@ -113,23 +113,54 @@ fi
  ##
 
  # Script 4 : logcleaner.sh
- What it does? 
-   - Find and delete log files in /var/log older than N days. where N is input from user.
-   - The /var/log is root owned. And to delete files in it user must be given permission to do changes in it which will be a bad practice as then multiple user can have the authority to have the same permissions and make changes in the directory where log files are stored. Hence running this particular script as a root user.
-   - <img width="484" height="222" alt="Screenshot 2026-05-01 at 2 06 58 PM" src="https://github.com/user-attachments/assets/ca1f21fb-4af0-40e6-b997-4014fcd0c5ea" />
-   - <img width="718" height="334" alt="Screenshot 2026-05-01 at 2 29 03 PM" src="https://github.com/user-attachments/assets/43a0e7e1-d2b5-4b35-b66d-e3a45b7ef890" />
-   - <img width="649" height="556" alt="Screenshot 2026-05-01 at 2 28 25 PM" src="https://github.com/user-attachments/assets/88691c1b-444e-4d46-8df1-ba86260ff33c" />
-   - <img width="583" height="398" alt="Screenshot 2026-05-01 at 2 31 20 PM" src="https://github.com/user-attachments/assets/e05c358d-dde1-4057-9467-a385e41e43ec" />
+ 
+ ## **What it does?**
+
+ 🧹 log-cleaner.sh
+ 
+ Finds all .log files in /var/log older than N days. Runs a dry-run first (prints the files), then prompts for confirmation before deletion.
+
+  **What I learnt?**
+    - The /var/log directory is owned by root user and changing owner from root to other user is not a good practive in linux as then multiple user can have the authority to have the same permissions and make changes in the directory where log files are stored. Hence, running this script as a root user.
+    - Different ways to take user input. for eg. timeout prompt, hidden user input in case of passwords
+    
+ ## **Execution** 
+
+   - Created a new directory as script4
+     <img width="484" height="222" alt="Screenshot 2026-05-01 at 2 06 58 PM" src="https://github.com/user-attachments/assets/ca1f21fb-4af0-40e6-b997-4014fcd0c5ea" />
+   
+   - logcleaner.sh
+     <img width="718" height="334" alt="Screenshot 2026-05-01 at 2 29 03 PM" src="https://github.com/user-attachments/assets/43a0e7e1-d2b5-4b35-b66d-e3a45b7ef890" />
+   
+   - Successful execution of logcleaner.sh
+     <img width="583" height="398" alt="Screenshot 2026-05-01 at 2 31 20 PM" src="https://github.com/user-attachments/assets/e05c358d-dde1-4057-9467-a385e41e43ec" />
 
    ##
    
 # Script 5 : backup.sh
-What it does?
-  - Create a compressed archive of a specified directory with a timestamp in the filename
-  - <img width="552" height="261" alt="Screenshot 2026-05-01 at 5 08 52 PM" src="https://github.com/user-attachments/assets/7cb7aa44-c688-453e-8115-b88196c373f5" />
-  - <img width="545" height="122" alt="Screenshot 2026-05-01 at 5 11 13 PM" src="https://github.com/user-attachments/assets/1dae17b9-3120-467d-b5ae-57fea367aeee" />
-  - Logcleaner.sh could not run as it was owned by root user <img width="739" height="276" alt="Screenshot 2026-05-01 at 5 15 57 PM" src="https://github.com/user-attachments/assets/c2d6556d-ff55-43b4-9fa5-beabfc4be507" />
-  - New script :
+
+## **What it does?**
+
+💾 backup.sh
+Creates a timestamped compressed archive (.tar.gz) of any specified directory. Confirms the output file size on completion.
+
+ **What I learnt?**
+  - learnt about a new command 'tar' and its various options. for eg. -c,-x,-v,-t,-f,-z,-j 
+  - tar is used for archives and file transfers
+  - By default,  tar  saves the archive in the current directory where we run the command.
+  - A non-root user can not archive files that are owned by root user. Fix : run the script with sudo so that root user owned files can also be archived by any user.
+  - OR we can exclude the root user owned directory/files from archiving. 
+  
+
+ ## **Execution** 
+ 
+  - Creating script5 directory and previewing our script
+    <img width="552" height="261" alt="Screenshot 2026-05-01 at 5 08 52 PM" src="https://github.com/user-attachments/assets/7cb7aa44-c688-453e-8115-b88196c373f5" />
+  
+  - backup.sh
+    <img width="545" height="122" alt="Screenshot 2026-05-01 at 5 11 13 PM" src="https://github.com/user-attachments/assets/1dae17b9-3120-467d-b5ae-57fea367aeee" />
+  - logcleaner.sh could not run as it was owned by root user <img width="739" height="276" alt="Screenshot 2026-05-01 at 5 15 57 PM" src="https://github.com/user-attachments/assets/c2d6556d-ff55-43b4-9fa5-beabfc4be507" />
+  - Successfully executing script with sudo.
     <img width="741" height="431" alt="Screenshot 2026-05-01 at 5 31 40 PM" src="https://github.com/user-attachments/assets/d82ebcf8-a27f-481e-8353-0831d0a16cac" />
 
 ##
